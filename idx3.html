@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <style>
+            /* 右上角的链接样式 */
+            .top-right {
+                position: absolute; /* 绝对定位 */
+                top: 10px;           /* 距离页面顶部 10px */
+                right: 10px;         /* 距离页面右边 10px */
+                text-align: right;   /* 文本右对齐 */
+            }
+
+            /* 搜索框和按钮居中对齐 */
+            .center {
+                display: flex;
+                flex-direction: column; /* 垂直排列 */
+                justify-content: center;
+                align-items: center;
+                height: 100vh;  /* 高度 100% 居中 */
+            }
+
+            /* 搜索框样式 */
+            input[type="text"] {
+                width: 400px;      /* 调大搜索框宽度 */
+                height: 50px;      /* 调高搜索框高度 */
+                border-radius: 25px; /* 圆角 */
+                border: 2px solid #ccc;
+                padding: 10px;
+                font-size: 18px;   /* 调大字体 */
+                box-sizing: border-box;
+                margin-bottom: 15px; /* 各输入框之间的间距 */
+            }
+
+            /* 按钮样式 */
+            input[type="submit"] {
+                margin-top: 20px;  /* 按钮与搜索框之间的间距 */
+                width: 200px;
+                height: 50px;
+                font-size: 18px;
+                border-radius: 25px; /* 按钮圆角 */
+                background-color: #5690e7;
+                color: white;
+                border: none;
+                cursor: pointer;
+                box-sizing: border-box;
+            }
+
+            /* 按钮悬停效果 */
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+
+            /* 标签样式 */
+            label {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 5px;
+                display: block;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="top-right">
+            <a href="E:\study\webapp\pro0\idx.html" target="_blank">google</a>
+        </div>
+
+        <div class="center">
+            <form action="https://www.google.com/search" method="GET">
+                <!-- All these words -->
+                <label for="allWords">Find pages with… "all these words:"</label>
+                <input type="text" id="allWords" name="q" placeholder="Enter words...">
+                
+                <!-- Exact phrase -->
+                <label for="exactPhrase">Find pages with… "this exact word or phrase:"</label>
+                <input type="text" id="exactPhrase" name="as_epq" placeholder="Enter exact phrase...">
+                
+                <!-- Any of these words -->
+                <label for="anyWords">Find pages with… "any of these words:"</label>
+                <input type="text" id="anyWords" name="as_oq" placeholder="Enter words separated by spaces...">
+                
+                <!-- None of these words -->
+                <label for="noneWords">Find pages with… "none of these words:"</label>
+                <input type="text" id="noneWords" name="as_eq" placeholder="Enter words to exclude...">
+
+                <!-- Submit Button -->
+                <input type="submit" value="GoogleAdv Search">
+            </form>
+        </div>
+    </body>
+</html>

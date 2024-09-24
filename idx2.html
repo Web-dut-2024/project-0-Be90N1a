@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+    </head>
+    <style>
+        /* 右上角的链接样式 */
+        .top-right {
+            position: absolute; /* 绝对定位 */
+            top: 10px;           /* 距离页面顶部 10px */
+            right: 10px;         /* 距离页面右边 10px */
+            text-align: right;   /* 文本右对齐 */
+        }
+
+        /* 搜索框和按钮居中对齐 */
+        .center {
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;  /* 高度 100% 居中 */
+        }
+
+        /* 搜索框样式 */
+        input[type="text"] {
+            width: 400px;      /* 调大搜索框宽度 */
+            height: 50px;      /* 调高搜索框高度 */
+            border-radius: 25px; /* 圆角 */
+            border: 2px solid #ccc;
+            padding: 10px;
+            font-size: 18px;   /* 调大字体 */
+            box-sizing: border-box;
+        }
+
+        /* 按钮样式 */
+        input[type="submit"] {
+            margin-top: 20px;  /* 按钮与搜索框之间的间距 */
+            width: 200px;
+            height: 50px;
+            font-size: 18px;
+            border-radius: 25px; /* 按钮圆角 */
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        /* 按钮悬停效果 */
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+
+    <body>
+        <div class="top-right">
+            <a href="E:\study\webapp\pro0\idx.html" target="_blank">google</a>
+        </div>
+
+        <div class="center">
+            <form action="https://www.google.com/imghp">
+                <input type="text" name="q">
+                <input type="submit" value="googlePic Search">
+            </form>
+        </div>
+    </body>
+
+
+    
+</html> 

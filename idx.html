@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search</title>
+        <style>
+            /* 右上角的链接样式 */
+            .top-right {
+                position: absolute; /* 绝对定位 */
+                top: 10px;           /* 距离页面顶部 10px */
+                right: 10px;         /* 距离页面右边 10px */
+                text-align: right;   /* 文本右对齐 */
+            }
+
+            /* 搜索框和按钮居中对齐 */
+            .center {
+                display: flex;
+                flex-direction: column; /* 垂直排列 */
+                justify-content: center;
+                align-items: center;
+                height: 100vh;  /* 高度 100% 居中 */
+            }
+
+            /* 搜索框样式 */
+            input[type="text"] {
+                width: 400px;      /* 调大搜索框宽度 */
+                height: 50px;      /* 调高搜索框高度 */
+                border-radius: 25px; /* 圆角 */
+                border: 2px solid #ccc;
+                padding: 10px;
+                font-size: 18px;   /* 调大字体 */
+                box-sizing: border-box;
+            }
+
+            /* 按钮样式 */
+            input[type="submit"], .lucky-button ,.normal-button {
+                margin-top: 20px;  /* 按钮与搜索框之间的间距 */
+                width: 200px;
+                height: 50px;
+                font-size: 18px;
+                border-radius: 25px; /* 按钮圆角 */
+                color: white;
+                border: none;
+                cursor: pointer;
+                box-sizing: border-box;
+            }
+
+            /* 按钮悬停效果 */
+            .normal-button {
+                background-color: #4CAF50;
+            }
+
+            .lucky-button {
+                background-color: #f4b400; /* 黄色按钮 */
+                margin-left: 5px;
+            }
+
+            input[class="normal-button"]:hover {
+                background-color: #45a049;
+            }
+
+            input[class="lucky-button"]:hover {
+                background-color: #ccb43b;
+            } 
+
+            .button-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            } 
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="top-right">
+            <a href="E:\study\webapp\pro0\idx2.html" target="_blank">googlePic</a>
+            <a href="E:\study\webapp\pro0\idx3.html" target="_blank">googleAdv</a>
+        </div>
+
+        <!-- 搜索框和按钮居中显示 -->
+        <div class="center">
+            <form action="https://www.google.com/search" method="GET">
+                <input type="text" name="q" placeholder="Search Google">
+                <div class="button-container">
+                    <input type="submit"  class="normal-button"  value="Google Search">
+                    <input type="submit" class="lucky-button" name="btnI" value="I'm Feeling Lucky">
+                </div>
+            </form>
+
+        </div>
+        
+    </body>
+</html>
